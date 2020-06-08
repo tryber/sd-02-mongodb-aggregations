@@ -1,74 +1,27 @@
 {
-  "_id": ObjectId("573a1393f29313caabcdc1c2"),
-  "title": "Rebecca",
-  "year": 1940,
-  "runtime": 130,
-  "released": ISODate("1940-04-12T00:00:00Z"),
-  "cast": [
-    "Laurence Olivier",
-    "Joan Fontaine",
-    "George Sanders",
-    "Judith Anderson"
-  ],
-  "poster": "http://ia.media-imdb.com/images/M/MV5BMTM5ODA4ODMzM15BMl5BanBnXkFtZTcwOTA2NTEwNA@@._V1._CR9,22,314,458_SY132_CR0,0,89,132_AL_.jpg_V1_SX300.jpg",
-  "plot": "A self-conscious bride is tormented by the memory of her husband's dead first wife.",
-  "fullplot": "A shy ladies' companion, staying in Monte Carlo with her stuffy employer, meets the wealthy Maxim de Winter. She and Max fall in love, marry and return to Manderley, his large country estate in Cornwall. Max is still troubled by the death of his first wife, Rebecca, in a boating accident the year before. The second Mrs. de Winter clashes with the housekeeper, Mrs. Danvers, and discovers that Rebecca still has a strange hold on everyone at Manderley.",
-  "awards": "Won 2 Oscars. Another 3 wins & 9 nominations.",
-  "lastupdated": "2015-09-17 01:24:04.527000000",
-  "type": "movie",
-  "languages": [
-    "English",
-    "French"
-  ],
-  "directors": [
-    "Alfred Hitchcock"
-  ],
-  "writers": [
-    "Daphne Du Maurier (celebrated novel)",
-    "Robert E. Sherwood (screen play)",
-    "Joan Harrison (screen play)",
-    "Philip MacDonald (adaptation)",
-    "Michael Hogan (adaptation)"
-  ],
-  "imdb": {
-    "rating": 8.2,
-    "votes": 79450,
-    "id": 32976
-  },
-  "countries": [
-    "USA"
-  ],
-  "rated": "NOT RATED",
-  "genres": [
-    "Mystery",
-    "Thriller"
-  ],
-  "tomatoes": {
-    "viewer": {
-      "rating": 4.1,
-      "numReviews": 38386,
-      "meter": 92
-    },
-    "dvd": ISODate("2001-03-13T00:00:00Z"),
-    "rotten": 0,
-    "lastUpdated": ISODate("2015-08-18T18:57:18Z"),
-    "consensus": "Hitchcock's first American film (and his only Best Picture winner), Rebecca is a masterpiece of haunting atmosphere, Gothic thrills, and gripping suspense.",
-    "critic": {
-      "rating": 8.7,
-      "numReviews": 47,
-      "meter": 100
-    },
-    "production": "United Artists",
-    "fresh": 47
-  },
-  "num_mflix_comments": 1,
-  "comments": [
-    {
-      "name": "Maester Aemon",
-      "email": "peter_vaughan@gameofthron.es",
-      "movie_id": ObjectId("573a1393f29313caabcdc1c2"),
-      "text": "Optio architecto laudantium quisquam cumque. Voluptates fugit rerum accusantium saepe eligendi. Nulla vero accusamus voluptatibus quam quibusdam quod.",
-      "date": ISODate("1982-01-19T06:23:33Z")
-    }
-  ]
+	"_id" : ObjectId("572bb8222b288919b68abf5a"),
+	"bikeid" : 17827,
+	"usertype" : "Subscriber",
+	"gender" : 1,
+	"birthYear" : 1969,
+	"endStationId" : 498,
+	"endStationLocation" : {
+		"type" : "Point",
+		"coordinates" : [
+			-73.98808416,
+			40.74854862
+		]
+	},
+	"endStationName" : "Broadway & W 32 St",
+	"startStationId" : 476,
+	"startStationLocation" : {
+		"type" : "Point",
+		"coordinates" : [
+			-73.97966069,
+			40.74394314
+		]
+	},
+	"startStationName" : "E 31 St & 3 Ave",
+	"startTime" : ISODate("2016-01-01T00:00:45Z"),
+	"stopTime" : ISODate("2016-01-01T00:07:04Z")
 }
