@@ -17,13 +17,9 @@ db.movies.aggregate(
         avaliado: "$rated",
         notaIMDB: "$imdb.rating",
         votosIMDB: "$imdb.votes",
-        ano: "$year",
+        ano: "$year"
       }
-    }
+    },
+    { $sort: { ano: -1, notaIMDB: -1 } }
   ]
 ).pretty();
-
-
-const testandoFunc2 = (argumento) => {
-  return argumento.length()
-};
