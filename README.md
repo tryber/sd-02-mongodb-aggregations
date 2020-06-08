@@ -323,7 +323,7 @@ O resultado da sua query deve ter o seguinte formato:
 
 ### Entregáveis
 
-Para entregar o seu projeto você deverá criar um Pull Request neste repositório. Este Pull Request deverá conter os arquivos js dos desafios 1 ao 23.
+Para entregar o seu projeto você deverá criar um Pull Request neste repositório. Este Pull Request deverá conter os arquivos js dos desafios 1 ao 14.
 
 Qualquer dúvida, procure a monitoria. Lembre-se que você pode consultar nosso conteúdo sobre Git & GitHub sempre que quiser!
 
