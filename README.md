@@ -114,7 +114,7 @@ Crie um _pipeline_ que retorne apenas os filmes com o título composto apenas de
 
 Dica: utilize os operadores `$split` e `$size` para te auxiliar.
 
-Sua query deve retornar `8028` documentos.
+Sua query deve retornar `8068` documentos.
 
 ##### Desafio 5
 
