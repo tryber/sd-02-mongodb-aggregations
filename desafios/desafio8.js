@@ -31,10 +31,9 @@ db.air_alliances.aggregate([
   { $unwind: '$mergedAirlines' },
   {
     $group: {
-      _id: '$mergedAirlines.airline.name',
+      _id: '$name',
       totalRotas: { $sum: 1 }
     }
   },
   { $sort: { totalRotas: -1 } },
-  { $limit: 1 }
 ]);
