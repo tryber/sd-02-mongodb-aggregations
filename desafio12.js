@@ -1,0 +1,1 @@
+db.trips.find()
