@@ -86,7 +86,7 @@ Sua query deve retornar `41` documentos.
 
 ##### Desafio 2
 
-A escolha do filme da noite foi um sucesso, mas infelizmente ficamos com nossa banda de internet quase esgotada, e ainda precisamos de uma nova recomendação de filme. Para diminuir o volume de dados trafegados, utilizando o mesmo _pipeline_ anterior, retorne apenas os campos `title`, `rated`, `imdb.rating`, `imbd.votes` e `year`, modificando seus nomes para `titulo`, `avaliado`, `notaIMDB`, `votosIMDB` e `ano`, respectivamente.
+A escolha do filme da noite foi um sucesso, mas infelizmente ficamos com nossa banda de internet quase esgotada, e ainda precisamos de uma nova recomendação de filme. Para diminuir o volume de dados trafegados, utilizando o mesmo _pipeline_ anterior, retorne apenas os campos `title`, `rated`, `imdb.rating`, `imdb.votes` e `year`, modificando seus nomes para `titulo`, `avaliado`, `notaIMDB`, `votosIMDB` e `ano`, respectivamente.
 
 O resultado da sua query deve ter o seguinte formato:
 
@@ -114,7 +114,7 @@ Crie um _pipeline_ que retorne apenas os filmes com o título composto apenas de
 
 Dica: utilize os operadores `$split` e `$size` para te auxiliar.
 
-Sua query deve retornar `8028` documentos.
+Sua query deve retornar `8068` documentos.
 
 ##### Desafio 5
 
@@ -185,12 +185,12 @@ Liste todas as parcerias da coleção `air_alliances`, que voam rotas com um Boi
 O resultado da sua query deve ter o seguinte formato:
 
 ```javascript
-{ "_id" : <nome_da_rota>, "totalRotas" : <total_de_rotas> }
+{ "_id" : <nome_da_alianca>, "totalRotas" : <total_de_rotas> }
 ```
 
 ##### Desafio 9
 
-Determine o menor e o maior ano de nascimento. Guarde essa informação, você precisará dela mais tarde.
+A partir da coleção `trips`, determine o menor e o maior ano de nascimento. Guarde essa informação, você precisará dela mais tarde.
 
 Não considere documentos com valores vazios (`""`) ou em que o campo não existe!
 
