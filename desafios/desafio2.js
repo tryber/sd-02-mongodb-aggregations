@@ -22,8 +22,3 @@ db.movies.aggregate(
     }
   ]
 ).pretty();
-
-
-const testandoFunc2 = (argumento) => {
-  return argumento.length()
-};
