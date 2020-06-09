@@ -19,7 +19,7 @@ db.movies.aggregate([
         $avg: "$imdb.rating"
       },
       "desvio_padrao": {
-        $stdDevPop: "$imdb.rating"
+        $stdDevSamp: "$imdb.rating"
       }
     }
   },
