@@ -5,7 +5,7 @@ db.air_alliances.aggregate([
   {
     $lookup: {
       from: "air_routes",
-      let: { airline_alliance: "$airlines", alliance_name: "$name" },
+      let: { airline_alliance: "$airlines" },
       pipeline: [
         {
           $match: {
