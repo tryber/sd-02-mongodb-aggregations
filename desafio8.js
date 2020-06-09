@@ -19,6 +19,8 @@ db.air_alliances.aggregate([
       as: "alliance_routes_by_plane"
     }
   },
+  { $match: { alliance_routes_by_plane: { $ne: [] } } },
+  { $unwind: "$alliance_routes_by_plane" },
   {
     $group: {
       _id: "$name",
