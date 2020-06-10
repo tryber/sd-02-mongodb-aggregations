@@ -4,7 +4,7 @@ db.trips.aggregate([
   {
     $match: {
       birthYear: { $exists: 1 },
-      birthYear: { $not: { $eq: '' } }
+      birthYear: { $ne: '' }
     }
   },
   {
@@ -22,8 +22,6 @@ db.trips.aggregate([
   {
     $project: {
       _id: 0,
-      maiorAnoNascimento: 1,
-      menorAnoNascimento: 1,
     }
   }
 ]);

@@ -2,15 +2,8 @@ use aggregations;
 
 db.trips.aggregate([
   {
-    $addFields: {
-      convertDayOfWeek: {
-        $dayOfWeek: '$startTime'
-      }
-    }
-  },
-  {
     $group: {
-      _id: '$convertDayOfWeek',
+      _id: { $dayOfWeek: '$startTime' },
       total: {
         $sum: 1
       }
