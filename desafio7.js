@@ -2,9 +2,9 @@ use aggregations;
 
 db.movies.aggregate([
   {
-   $match: {
-     "languages": "English"
-   },
+    $match: {
+      "languages": "English"
+    },
   },
   {
     $unwind: "$cast"
