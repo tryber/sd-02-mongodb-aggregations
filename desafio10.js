@@ -1,4 +1,4 @@
-use aggregatios;
+use aggregations;
 
 db.trips.aggregate([
   {
