@@ -11,4 +11,13 @@ db.movies.aggregate([
       "desvio_padrao": { $stdDevSamp: "$imdb.rating" },
     }
   },
+  {
+    $project: {
+      "_id": 0,
+      "maior_rating": "$maior_rating",
+      "menor_rating": "$menor_rating",
+      "media_rating": "$media_rating",
+      "desvio_padrao": "$desvio_padrao"
+    }
+  }
 ]);
