@@ -14,6 +14,6 @@ db.trips.aggregate([
     }
   },
   {
-    $project: { tipo:  "$_id", duracaoMedia: {$trunc: ["$duracaoMedia", 2] } }
+    $project: { _id: 0, tipo:  "$_id", duracaoMedia: {$trunc: ["$duracaoMedia", 2] } }
   }
 ]);

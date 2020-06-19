@@ -10,4 +10,4 @@ db.movies.aggregate([
       ]
     }
   }
-]);
+]).pretty();

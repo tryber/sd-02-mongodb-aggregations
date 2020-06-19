@@ -10,5 +10,8 @@ db.movies.aggregate([
       media_rating: { $avg: "$imdb.rating" },
       desvio_padrao: { $stdDevSamp: "$imdb.rating" }
     }
+  },
+  { 
+    $project: { _id: 0 }
   }
-]);
+]).pretty();

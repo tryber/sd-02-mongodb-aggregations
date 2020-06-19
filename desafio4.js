@@ -1,4 +1,3 @@
-use aggregations;
 db.movies.aggregate([
   {
     $project: {
@@ -12,4 +11,4 @@ db.movies.aggregate([
   {
     $match: { tamanhoTitulo: 1 }
   }
-]);
+]).pretty();
