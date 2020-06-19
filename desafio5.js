@@ -15,8 +15,8 @@ db.movies.aggregate([
       $cond: {
         if: {
           $and: [
-           { $ne: [ "$fav_actors", [] ] },
-           { $ne: [ "$fav_actors", null ] }] },
+          { $ne: [ "$fav_actors", [] ] },
+          { $ne: [ "$fav_actors", null ] }] },
         then: { $size: "$fav_actors" },
         else: 0 } } } },
   { $sort: { num_favs: -1, "tomatoes.viewer.rating": -1, title: -1 } },
