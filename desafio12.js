@@ -1,14 +1,14 @@
 const week = db.trips.aggregate([
   {
     $addFields: {
-      "week": {
+      "week1": {
         $dayOfWeek: "$startTime"
       }
     }
   },
   {
     $group: {
-      _id: "$week",
+      _id: "$week1",
       "total": { $sum: 1 },
     }
   },
