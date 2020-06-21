@@ -2,11 +2,18 @@ use aggregations;
 
 db.trips.aggregate([
   {
+    $match: {
+      "birthYear": {
+        $ne: ''
+      }
+    }
+  },
+  {
     $group: {
       _id: null,
-      "maiorAnoNascimento": { $max: "$birthYear" },
-      "menorAnoNascimento": { $min: "$birthYear" }
-    }
+      "maiorAnoNascimento": { $max: { $toInt: "$birthYear" } },
+      "menorAnoNascimento": { $min: { $toInt: "$birthYear" } }
+    },
   },
   {
     $project: {
