@@ -1,27 +1,5 @@
-const week = db.trips.aggregate([
-  {
-    $addFields: {
-      "weekField": {
-        $dayOfWeek: "$startTime"
-      }
-    }
-  },
-  {
-    $group: {
-      _id: "$weekField",
-      "total": { $sum: 1 },
-    }
-  },
-  { $sort: { total: -1 } },
-  { $limit: 1 },
-  {
-    $project: {
-      _id: 0,
-      "diaDaSemana": "$_id",
-      "total": "$total"
-    }
-  }
-]).toArray()[0].diaDaSemana;
+const week = require('./desafio11');
+const weekField = week.toArray()[0].diaDaSemana;
 
 db.trips.aggregate([
   {
@@ -33,7 +11,7 @@ db.trips.aggregate([
   },
   {
     $match: {
-      "week": week
+      "week": weekField
     }
   },
   {

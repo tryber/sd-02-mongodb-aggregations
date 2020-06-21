@@ -1,4 +1,4 @@
-db.trips.aggregate([
+const week = db.trips.aggregate([
   {
     $addFields: {
       "week": {
@@ -22,3 +22,5 @@ db.trips.aggregate([
     }
   }
 ]);
+
+module.exports = week;
