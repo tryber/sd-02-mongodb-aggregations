@@ -17,11 +17,10 @@ db.air_alliances.aggregate([
       as: 'rotasCorrespondentes'
     }
   },
-  { $addFields: { totalRotas: { $size: "$rotasCorrespondentes" } } },
   {
     $group: {
       _id: "$name",
-      totalRotas: { $sum: "$totalRotas" }
+      totalRotas: { $sum: { $size: "$rotasCorrespondentes" } }
     }
   },
   { $sort: { totalRotas: -1 } },
