@@ -14,10 +14,14 @@ db.trips.aggregate(
       $group: {
         _id: 0,
         maiorAnoNascimento: {
-          $max: "$birthYear"
+          $max: {
+            $toInt: "$birthYear",
+          }
         },
         menorAnoNascimento: {
-          $min: "$birthYear"
+          $min: {
+            $toInt: "$birthYear",
+          }
         },
       }
     },
