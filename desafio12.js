@@ -1,3 +1,5 @@
+use aggregations;
+
 const weekField = db.trips.aggregate([
   {
     $addFields: {
@@ -38,16 +40,21 @@ db.trips.aggregate([
   },
   {
     $group: {
-      _id: { nomeEstacao: "$startStationName" },
+      _id: "$startStationName",
       total: { $sum: 1 }
     }
   },
   {
-    $group: {
-      _id: "$_id",
-      total: {
-        $max: "$total"
-      }
+    $sort: { "total": -1 }
+  },
+  {
+    $limit: 1
+  },
+  {
+    $project: {
+      "_id": 0,
+      "nomeEstacao": "$_id",
+      "total": "$total"
     }
   }
 ]);

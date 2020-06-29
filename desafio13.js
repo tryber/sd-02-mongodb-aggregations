@@ -1,3 +1,5 @@
+use aggregations;
+
 db.trips.aggregate([
   {
     $match: {
