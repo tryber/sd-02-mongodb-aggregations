@@ -51,28 +51,3 @@ db.trips.aggregate([
     }
   }
 ]);
-
-
-db.trips.aggregate([
-  {
-    $addFields: {
-      dia_semana: { $dayOfWeek: "$startTime" }
-    }
-  },
-  {
-    $group: {
-      _id: { dia_semana: "$dia_semana", nomeEstacao: "$startStationName" },
-      total: { $sum: 1 }
-    }
-  },
-  {
-    $match: { "_id.dia_semana": maiorDia }
-  },
-  {
-    $sort: { total: -1 }
-  },
-  {
-    $limit: 1
-  },
-
-]);
