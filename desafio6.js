@@ -1,6 +1,8 @@
 db.movies.aggregate([
   {
-    $limit: 10
+    $match:{
+      "awards": /^won\s\d+\soscar/i
+    }
   },
   {
     $group: {
